@@ -12,8 +12,9 @@ app.get('/', (req, res) => {
   res.send('Welcome to the Pokemon App!')
 })
 
-
+//The json is showing in the browser
 app.get('/pokemon', (req, res) => {
     res.send({pokemon})
+    res.render('index.jsx')
   })
   
