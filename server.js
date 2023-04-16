@@ -1,11 +1,19 @@
 const express = require('express')
 const app = express()
 const PORT = 3000
+const pokemon  = require('./models/pokemon.js')
+
+//This is the server running at PORT 3000
+app.listen(PORT, () => {
+    console.log(`Example app listening on PORT ${PORT}`)
+  })
 
 app.get('/', (req, res) => {
   res.send('Welcome to the Pokemon App!')
 })
 
-app.listen(PORT, () => {
-  console.log(`Example app listening on PORT ${PORT}`)
-})
+
+app.get('/pokemon', (req, res) => {
+    res.send({pokemon})
+  })
+  
