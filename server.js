@@ -2,10 +2,10 @@ require('dotenv').config();
 const express = require('express')
 const app = express()
 const port = 3000
-// const pokemon = require('./models/pokemon');
+const mongoose = require('mongoose')
 const React = require('react');
 const Pokemon = require('./models/PokemonSchema');
-const connectToDB = require('./config/database');
+const connectToDB = require('./config/db');
 
 //=============Configuring Engine
 app.set('view engine', 'jsx');

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const pokemonSchema = new mongoose.Schema({
+const PokemonSchema = new mongoose.Schema({
     name: {
         type:String,
         required: false
@@ -12,6 +12,6 @@ const pokemonSchema = new mongoose.Schema({
 })
 
 
-const Pokemon = mongoose.model('Pokemon', pokemonSchema)
+const Pokemon = mongoose.model('Pokemon', PokemonSchema)
 
 module.exports = Pokemon;

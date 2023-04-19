@@ -1,6 +1,7 @@
 const React = require('react');
 const Pokemon = require('../models/PokemonSchema')
 
+
 function Index(props){
     const { Pokemon } = props;
     console.log(Pokemon)
@@ -14,7 +15,8 @@ function Index(props){
             {Pokemon.map((poke) => {
                 return(
                     <li key={poke._id}>
-                    <a href={`/pokemon/${poke._id}`}>{poke.name}</a></li>
+                    <a href={`/pokemon/${poke._id}`}>{poke.name}</a>
+                    </li>
                 )
                 
             })}
